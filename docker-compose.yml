@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  web:
+    image: "power-mgmt-web:1.0.0"
+    build:
+      context: .
+      dockerfile: ./_docker/Dockerfile
+    environment:
+      - NODE_ENV=production
+    ports:
+      - '3001:80'
